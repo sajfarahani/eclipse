@@ -28,4 +28,9 @@ def create_parser():
                         required=True)
     return parser
 
+parser = create_parser()
+parser.parse_args()
+# def main():
+#     args = create_parser().parse_args()
+
 
