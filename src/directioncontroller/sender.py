@@ -32,7 +32,7 @@ def main():
 
     args = create_parser().parse_args()
     controller.json_message(args.direction)
-    print("Sending direction" % args.direction )
+    print("Sending direction %s" % args.direction )
 
 
 
