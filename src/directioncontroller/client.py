@@ -10,5 +10,5 @@ def client_socket():
     print('Received', repr(data))
 
 
-if __name__ == '__main__':
-    client_socket()
+# if __name__ == '__main__':
+#     client_socket()

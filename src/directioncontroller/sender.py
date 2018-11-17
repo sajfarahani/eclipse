@@ -25,12 +25,11 @@ def create_parser():
                         required=True)
     return parser
 
-# parser = create_parser()
-# parser.parse_args()
 def main():
-    from directioncontroller import controller
+    from directioncontroller import controller, client
 
     args = create_parser().parse_args()
+    client.client_socket
     controller.json_message(args.direction)
     print("Sending direction %s" % args.direction )
 
