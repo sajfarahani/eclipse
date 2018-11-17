@@ -13,8 +13,8 @@ def json_message(direction):
     # data['instruction'] = direction
     local_ip = socket.gethostbyname(socket.gethostname())
     data = {
-        'sender' = local_ip,
-        'instruction' = direction
+        'sender' : local_ip,
+        'instruction' : direction
     }
 
     json_data = json.dumps(data, sort_keys=False, indent=2)
