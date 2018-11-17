@@ -15,7 +15,7 @@ def json_message(direction):
     json_data = json.dumps(data, sort_keys=False, indent=2)
     print("data %s" % json_data)
 
-    send_message(json_data)
+    send_message(json_data + ";")
 
     return json_data
 
@@ -23,7 +23,7 @@ def json_message(direction):
 def send_message(data):
     with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
         s.connect((HOST, PORT))
-        s.sendall(data)
+        s.sendall(data.encode())
         data = s.recv(1024)
 
     print('Received', repr(data))
