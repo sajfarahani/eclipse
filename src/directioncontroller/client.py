@@ -7,14 +7,6 @@ BUFFER_SIZE = 1024
 param = []
 i=0
 
-#s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-#s.bind((TCP_IP,TCP_PORT))
-#s.listen(1)
-
-#print 'Listening for client...'
-
-#conn, addr = s.accept()
-#print 'Connection address:', addr
 def client_socket():
     while 1:
         s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
