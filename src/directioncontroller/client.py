@@ -1,11 +1,8 @@
-import sys
 import socket
 
-TCP_IP = '127.0.0.1'
-TCP_PORT = 8192
+HOST = '127.0.0.1'  # The server's hostname or IP address
+PORT = 8192         # The port used by the server
 BUFFER_SIZE = 1
-# param = []
-# i=0
 
 def server_socket():
     data = []
