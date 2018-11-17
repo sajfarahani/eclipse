@@ -1,6 +1,6 @@
 import argparse
 
-known_direction = ['start', 'stop', 'left', 'right', 'forward', 'back']
+known_directions = ['start', 'stop', 'left', 'right', 'forward', 'back']
 
 
 # HOST = '127.0.0.1'
@@ -10,7 +10,7 @@ known_direction = ['start', 'stop', 'left', 'right', 'forward', 'back']
 class Direction(argparse.Action):
     def __call__(self, parser, namespace, values, option_string=None):
         direction = values
-        if direction.lower() not in known_direction:
+        if direction.lower() not in known_directions:
             parser.error("Unknown direction. Available direction are 'start', 'stop', 'left', 'right', 'forward', & 'back'")
         namespace.direction = direction.lower()
 
@@ -28,9 +28,11 @@ def create_parser():
                         required=True)
     return parser
 
-parser = create_parser()
-parser.parse_args()
-# def main():
-#     args = create_parser().parse_args()
+# parser = create_parser()
+# parser.parse_args()
+def main():
+    args = create_parser().parse_args()
+    json_message(args.direction)
+
 
 
