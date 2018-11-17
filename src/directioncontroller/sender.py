@@ -29,7 +29,7 @@ def main():
     from directioncontroller import controller, client
 
     args = create_parser().parse_args()
-    client.client_socket
+    client.client_socket()
     controller.json_message(args.direction)
     print("Sending direction %s" % args.direction )
 
