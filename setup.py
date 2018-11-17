@@ -15,7 +15,7 @@ setup(
     install_requires=[],
     entry_points={
         'console_scripts': [
-            'directioncontroller=directioncontroller.sender:main',
+            'directioncontroller=directioncontroller.sender:main'
         ]
     }
 

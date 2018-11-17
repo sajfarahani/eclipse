@@ -3,9 +3,6 @@ import argparse
 known_directions = ['start', 'stop', 'left', 'right', 'forward', 'back']
 
 
-# HOST = '127.0.0.1'
-# PORT = 65432
-
 
 class Direction(argparse.Action):
     def __call__(self, parser, namespace, values, option_string=None):
