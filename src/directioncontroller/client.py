@@ -32,4 +32,4 @@ def server_socket():
                 else:
                     break
 
-client_socket()
+server_socket()
