@@ -31,7 +31,7 @@ def main():
     from directioncontroller import controller
 
     args = create_parser().parse_args()
-    json_message(args.direction)
+    controller.json_message(args.direction)
     print("Sending direction" % args.direction )
 
 
