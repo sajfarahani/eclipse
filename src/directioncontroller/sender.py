@@ -9,7 +9,7 @@ known_directions = ['start', 'stop', 'left', 'right', 'forward', 'back']
 
 class Direction(argparse.Action):
     def __call__(self, parser, namespace, values, option_string=None):
-        direction = values
+        direction = values[0]
         if direction.lower() not in known_directions:
             parser.error("Unknown direction. Available direction are 'start', 'stop', 'left', 'right', 'forward', & 'back'")
         namespace.direction = direction.lower()
@@ -33,6 +33,7 @@ def create_parser():
 def main():
     args = create_parser().parse_args()
     json_message(args.direction)
+    print("Sending direction" % args.direction )
 
 
 
