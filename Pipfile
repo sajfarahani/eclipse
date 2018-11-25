@@ -12,7 +12,8 @@ name = "pypi"
 
 [packages]
 
-"flask-restful" = "*"
+"flask" = "*"
+"httplib2" = "*"
 
 [requires]
 
