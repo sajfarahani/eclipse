@@ -15,12 +15,12 @@ def json_message(direction):
     json_data = json.dumps(data, sort_keys=False, indent=2)
     print("data %s" % json_data)
 
-    send_message(json_data + ";")
+    post_message(json_data + ";")
 
     return json_data
 
 
-def send_message(data):
+def post_message(data):
     with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
         s.connect((HOST, PORT))
         s.sendall(data.encode())

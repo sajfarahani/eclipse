@@ -29,4 +29,5 @@ def server_socket():
                 else:
                     break
 
-server_socket()
+if __name__ == '__main__':
+    server_socket()
